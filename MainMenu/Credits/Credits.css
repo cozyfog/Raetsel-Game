@@ -1,0 +1,17 @@
+.Credits {
+    background-color:rgba(199, 199, 199, 0.911);
+     text-align: center;
+     border-radius: 12px;
+     padding: 3%;
+}
+
+h3 {
+    font-size: large;
+}
+
+h4 {
+    font-size: medium;
+}
+.material-symbols-outlined {
+   font-size: large;
+}

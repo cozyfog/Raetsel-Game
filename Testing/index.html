@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="index.js"></script>
+</head>
+<body style="text-align: center;">
+    <div style="display: flex; align-items: center; justify-content: center;">
+        <div style="margin: 20px;">
+            <button onclick="increase('counter0')">/\</button>
+            <h1 id="counter0">0</h1>
+            <button onclick="decrease('counter0')">\/</button>
+        </div>
+
+        <div style="margin: 20px;">
+            <button onclick="increase('counter1')">/\</button>
+            <h1 id="counter1">0</h1>
+            <button onclick="decrease('counter1')">\/</button>
+        </div>
+
+        <div style="margin: 20px;">
+            <button onclick="increase('counter2')">/\</button>
+            <h1 id="counter2">0</h1>
+            <button onclick="decrease('counter2')">\/</button>
+        </div>
+
+        <div style="margin: 20px;">
+            <button onclick="increase('counter3')">/\</button>
+            <h1 id="counter3">0</h1>
+            <button onclick="decrease('counter3')">\/</button>
+        </div>
+    </div>
+    <button onclick="submit(['counter0', 'counter1', 'counter2', 'counter3'])">Submit</button>
+
+    <p id="main-text">
+        <iframe src="main.txt" width=200 height=100 frameborder=0 ></iframe>
+    </p>
+</body>
+</html>

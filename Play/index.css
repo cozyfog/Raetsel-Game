@@ -1,0 +1,23 @@
+body {
+    background-color: white;
+    /* background-image: url("../death\ screen/g.png"); */
+}
+
+iframe {
+    overflow-x: hidden;
+    /* background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red); */
+}
+
+/* TODO: Fade in animation */
+
+.main {
+    text-align: center;
+}
+
+.inline-code {
+    z-index: 2147483646;
+    position: fixed;
+    top: 25%;
+    left: 39%;
+    /*opacity: 0;
+*/}
