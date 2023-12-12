@@ -8,13 +8,16 @@
     <script src="index.js"></script>
 </head>
 <body>
-    <div class="main">
-        <div class="action-buttons">
-            <button onclick="openCode();">Code Einlösen</button>
-        </div>
 
+    <div class="topbar">
+        <iframe src="topbar.html" width="1920px", height="70px", frameborder="0"></iframe>
+    </div>
+<hr>
+    <div class="main">
         <iframe src="Story.txt" id="story-readin" frameborder="0" width="50%" height="2000px"></iframe>
         <div id="popup"></div>
+        <p id="actions-buttons" onclick="openCode();"></p>
     </div>
+    
 </body>
 </html>

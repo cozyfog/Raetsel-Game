@@ -19,5 +19,15 @@ iframe {
     position: fixed;
     top: 25%;
     left: 39%;
-    /*opacity: 0;
-*/}
+}
+
+.buttons {
+	border-radius: 15px;
+	background-color: #00000059; /* Green */
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	font-size: 16px;
+	width: 200px;
+	transition-duration: 0.4s;
+}
