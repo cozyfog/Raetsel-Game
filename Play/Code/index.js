@@ -39,4 +39,6 @@ function submit(nums) {
         default:
             break;
     }
+
+    document.getElementById("code-entry-full").setAttribute("class", "hide");
 }

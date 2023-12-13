@@ -14,5 +14,5 @@ function Credits() {
 }
 
 function StartGame() {
-    window.open("../Play/index.html")
+    window.open("../Play/index.html", "_self")
 }

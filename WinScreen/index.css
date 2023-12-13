@@ -1,0 +1,116 @@
+body {
+	/*font-family: Lato, sans-serif;*/ font-family: 'Minecraft', sans-serif;
+	margin: 0; 
+	padding: 0;
+        background-size: cover;	/*setzt Hintergrundbild auf Breite des Containers*/	  
+	background-image: url("../img/price-chest.png");
+	width: 200px;
+        position:relative;
+
+background-color: black;
+
+         
+}
+
+h1 {
+    font-weight: lighter;			 
+    text-align: center;
+    font-size: 40px;
+    color: red;
+    /*font-family: Lato, sans-serif;*/ font-family: 'Minecraft', sans-serif;
+}
+
+h2 {		 
+    	 font-weight: lighter;			 
+    text-align: center;
+    font-size: 30px;
+    color: lightblue;  
+    /*font-family: Lato, sans-serif;*/ font-family: 'Minecraft', sans-serif;
+
+}/*background-color: darkgrey;  */
+ 
+button {		 
+    	 font-weight: lighter;			 
+    text-align: center;
+    font-size: 30px;
+    color: black;  
+    /*font-family: Lato, sans-serif;*/ font-family: 'Minecraft', sans-serif;
+
+}
+
+a {
+         font-weight: lighter;			 
+    text-align: center;
+    font-size: 10px;
+    color: red; 
+
+}
+
+
+.container {				
+    min-width: 775px;
+}
+
+.BILD {
+	font-weight: lighter;			 
+    font-size: 40px;
+    color: red;
+    /*font-family: Lato, sans-serif;*/ font-family: 'Minecraft', sans-serif;
+	text-align: center;
+	padding-left: 400px;
+
+	
+}
+.titl {
+	
+	font-weight: lighter;			 
+    text-align: center;
+    font-size: 100px;
+    color: blue;  
+    /*font-family: Lato, sans-serif;*/ font-family: 'Minecraft', sans-serif;
+	text-align: center;
+	padding-left:850px;
+
+}
+
+.buttons {
+	border-radius: 15px;
+	background-color: #561B0A  ; /* Green */
+	border: none;
+	color: yellow;
+	padding: 50px 50px;
+	font-size: 16px;
+	width: 400px;
+	transition-duration: 0.9s;
+	text-align: center;
+}
+
+.buttons:hover {
+	background-color: #ECE10A 
+
+}
+
+button {
+    font-family: 'Minecraft', sans-serif;
+}
+
+#footer {					
+    text-align: center; 
+    color: indianred; 
+    font-weight: lighter;
+    font-size: 20px; 
+    padding: 100px; 
+}
+
+.align {
+	text-align: center;
+	margin: 1;
+	padding-left: 300px;
+}
+
+/*.main {
+    background-size: cover;	/*setzt Hintergrundbild auf Breite des Containers*/	  
+/*	background-image: url("DEATH.png");
+	padding-top:1000px;	/*Innenabstand nach oben*/
+/*        positin:relative;
+}*/

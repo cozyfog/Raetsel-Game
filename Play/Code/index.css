@@ -1,13 +1,20 @@
+@import url('https://fonts.cdnfonts.com/css/minecraft-4');
+
 .code-entry {
+    position: fixed;
+    left: 35%;
     text-align: center;
-    display: flex;
-    width: 50%;
-    height: 30%;
+    bottom: 40%;
+    background-color: #00000059;
+    color: white;
+    border-radius: 15px;
+    font-family: 'Minecraft', sans-serif;
+    font-weight: lighter;
 }
 
 .code-entry-counter {
     border-radius: 15px;
-    background-color: #00000059; /* Green */
+    background-color: #00000059;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -16,4 +23,15 @@
     transition-duration: 0.4s;
     margin-bottom: 10px;
     margin: 20px;
+}
+
+.code-entry-main {
+    left: 30%;
+    text-align: center;
+    display: flex;
+    display: flex;
+}
+
+.code-entry-submit {
+    width: 200px;
 }
