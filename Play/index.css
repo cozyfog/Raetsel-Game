@@ -1,14 +1,37 @@
 body {
     background-color: white;
-    /* background-image: url("../death\ screen/g.png"); */
+    background-repeat: no-repeat;
+    /*background-position-y: -400px;*/
+    background-size: cover;
+    background-image: url('../img/house-inside.png');
 }
 
-iframe {
+.story-readin {
     overflow-x: hidden;
+    background-color: grey;
+    opacity: 70%;
+    border-radius: 15px;
+    bottom: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 50%;
+    left: 25%;
+    text-align: center;
+    min-width: 350px;
     /* background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red); */
 }
 
-/* TODO: Fade in animation */
+button {
+    border-radius: 15px;
+    background-color: #00000059; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    font-size: 16px;
+    width: 170px;
+    transition-duration: 0.4s;
+    margin-bottom: 10px;
+}
 
 .main {
     text-align: center;
@@ -19,15 +42,4 @@ iframe {
     position: fixed;
     top: 25%;
     left: 39%;
-}
-
-.buttons {
-	border-radius: 15px;
-	background-color: #00000059; /* Green */
-	border: none;
-	color: white;
-	padding: 15px 32px;
-	font-size: 16px;
-	width: 200px;
-	transition-duration: 0.4s;
 }
