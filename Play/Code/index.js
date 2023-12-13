@@ -25,6 +25,8 @@ function decrease(id) {
 }
 
 function submit(nums) {
+    document.getElementById("code-entry-full").setAttribute("class", "hide");
+    
     let code = '';
 
     nums.forEach((n) => {
@@ -40,5 +42,4 @@ function submit(nums) {
             break;
     }
 
-    document.getElementById("code-entry-full").setAttribute("class", "hide");
 }

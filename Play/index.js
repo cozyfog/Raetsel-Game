@@ -17,7 +17,7 @@ function gotoStory(index) {
     currentIndex = index;
 
     let elements = {
-        "button-code": false,
+        "button-code": true,
         "button-story0": false,
         "button-story1": false,
         "button-story2": false,
@@ -30,13 +30,42 @@ function gotoStory(index) {
     switch (index) {
         case 0:
             name = "house-inside";
-            elements["button-code"] = true;
+            elements = {
+                "button-code": trie,
+                "button-story0": false,
+                "button-story1": false,
+                "button-story2": true,
+                "button-story3": true,
+                "button-story4": true,
+                "button-story5": true,
+                "button-story6": true
+            };
             break;
         case 1:
             name = "house-inside-code";
+            elements = {
+                "button-code": false,
+                "button-story0": false,
+                "button-story1": true,
+                "button-story2": true,
+                "button-story3": true,
+                "button-story4": true,
+                "button-story5": true,
+                "button-story6": true
+            };
             break;
         case 2:
-            name = "won-screen";
+            name = "house-inside-code";
+            elements = {
+                "button-code": true,
+                "button-story0": false,
+                "button-story1": true,
+                "button-story2": true,
+                "button-story3": false,
+                "button-story4": true,
+                "button-story5": true,
+                "button-story6": true
+            };
             break;
         case 3:
             name = "won-screen";
