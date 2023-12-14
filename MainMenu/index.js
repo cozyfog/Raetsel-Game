@@ -1,5 +1,5 @@
 function QuitGame() {
-    window.close();
+    window.open('', '_self').close();
 }
 
 function Credits() {
