@@ -36,7 +36,7 @@ function submit(nums) {
 
     switch (code) {
         case '1109':
-            gotoStory(2);
+            gotoStory(5);
             break;
         default:
             break;

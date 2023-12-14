@@ -10,14 +10,13 @@ function openCode() {
         popup.setAttribute("class", "");
 }
 
-function gotoStory(index) {
-    const story = document.getElementById("story-readin");
-    story.setAttribute("src", "story/" + index + ".txt")
+function gotoStory(index) { 
     let name = "";
     currentIndex = index;
 
     let elements = {
         "button-code": true,
+        "button-final": true,
         "button-story0": false,
         "button-story1": false,
         "button-story2": false,
@@ -27,11 +26,12 @@ function gotoStory(index) {
         "button-story6": false
     };
     
-    switch (index) {
+    switch (currentIndex) {
         case 0:
             name = "house-inside";
             elements = {
-                "button-code": trie,
+                "button-code": true,
+                "button-final": true,
                 "button-story0": false,
                 "button-story1": false,
                 "button-story2": true,
@@ -42,12 +42,13 @@ function gotoStory(index) {
             };
             break;
         case 1:
-            name = "house-inside-code";
+            name = "outside-animals";
             elements = {
-                "button-code": false,
+                "button-code": true,
+                "button-final": true,
                 "button-story0": false,
                 "button-story1": true,
-                "button-story2": true,
+                "button-story2": false,
                 "button-story3": true,
                 "button-story4": true,
                 "button-story5": true,
@@ -55,10 +56,11 @@ function gotoStory(index) {
             };
             break;
         case 2:
-            name = "house-inside-code";
+            name = "outside-front";
             elements = {
                 "button-code": true,
-                "button-story0": false,
+                "button-final": true,
+                "button-story0": true,
                 "button-story1": true,
                 "button-story2": true,
                 "button-story3": false,
@@ -68,16 +70,61 @@ function gotoStory(index) {
             };
             break;
         case 3:
-            name = "won-screen";
+            name = "door-closed-16x9";
+            elements = {
+                "button-code": false,
+                "button-final": true,
+                "button-story0": true,
+                "button-story1": true,
+                "button-story2": true,
+                "button-story3": true,
+                "button-story4": false,
+                "button-story5": true,
+                "button-story6": true
+            };
             break;
         case 4:
-            name = "won-screen";
+            name = "house-inside-code";
+            elements = {
+                "button-code": true,
+                "button-final": true,
+                "button-story0": false,
+                "button-story1": true,
+                "button-story2": true,
+                "button-story3": true,
+                "button-story4": true,
+                "button-story5": false,
+                "button-story6": true
+            };
             break;
         case 5:
-            name = "won-screen";
+            name = "door-open-16x9";
+            index = 3;
+            elements = {
+                "button-code": true,
+                "button-final": true,
+                "button-story0": true,
+                "button-story1": true,
+                "button-story2": true,
+                "button-story3": true,
+                "button-story4": true,
+                "button-story5": true,
+                "button-story6": false
+            };
             break;
         case 6:
-            name = "won-screen";
+            name = "price-chest";
+            elements = {
+                "button-code": true,
+                "button-final": false,
+                "button-story0": true,
+                "button-story1": true,
+                "button-story2": true,
+                "button-story3": true,
+                "button-story4": true,
+                "button-story5": true,
+                "button-story6": true
+            };
             break;
         default:
             name = "won-screen";
@@ -85,11 +132,17 @@ function gotoStory(index) {
     }
 
     for (const [key, value] of Object.entries(elements)) {
+        const element = document.getElementById(key);
+        if (element == null) break;
+        
         if (value == false)
-            document.getElementById(key).setAttribute("class", "topbar-button");
+            element.setAttribute("class", "topbar-button");
         else
-            document.getElementById(key).setAttribute("class", "topbar-button hide");
+            element.setAttribute("class", "topbar-button hide");
     }
+
+    const story = document.getElementById("story-readin");
+    story.setAttribute("src", "story/" + index + ".txt")
 
     document.body.style.backgroundImage = "url('../img/" + name + ".png')";
 }
