@@ -1,6 +1,3 @@
-function QuitGame() {
-    window.open('', '_self').close();
-}
 
 function Credits() {
     const Credits = document.getElementById("Credits");
@@ -13,6 +10,14 @@ function Credits() {
         Credits.innerHTML = '';
 }
 
+function MainMenu() {
+    window.open("../Raetsel-Game-main/MainMenu/index.html", "_self")
+}
+
 function StartGame() {
-    window.open("../Play/index.html", "_self")
+    window.open("../Play/index.html", "_blank")
+}
+
+function QuitGame() {
+    openedWindow.close();
 }
