@@ -11,7 +11,7 @@ function Credits() {
 }
 
 function MainMenu() {
-    window.open("../Raetsel-Game-main/MainMenu/index.html", "_self")
+    window.open("MainMenu/index.html", "_self")
 }
 
 function StartGame() {
