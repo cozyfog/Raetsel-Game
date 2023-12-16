@@ -11,6 +11,11 @@ function openCode() {
 }
 
 function gotoStory(index) { 
+    /*const height = window.screen.availHeight;
+    const width = window.screen.availWidth;
+    
+    document.body.setAttribute("style", document.body.getAttribute("style") + "background-size: " + width + " " + height + ";");
+*/
     let name = "";
     currentIndex = index;
 
