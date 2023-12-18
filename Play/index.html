@@ -6,8 +6,10 @@
     <title>Spiel</title>
     <link rel="stylesheet" href="index.css">
     <script src="index.js"></script>
+
 </head>
 <body>
+
     <div class="topbar">
         <button class="topbar-button" id="button-code" onclick="openCode();">Code Einloesen</button>
         <button class="topbar-button" id="button-final" onclick="window.open('../WinScreen/index.html', '_self');">Spiel Beenden</button>
@@ -18,9 +20,19 @@
         <button class="topbar-button" id="button-story4" onclick="gotoStory(4)">Zurueck gehen</button>
         <button class="topbar-button" id="button-story5" onclick="gotoStory(3)">Zur Tuer gehen</button>
         <button class="topbar-button" id="button-story6" onclick="gotoStory(6)">Herein gehen</button>
+        <button class="topbar-button" id="button-story7" onclick="openMap();">Karte</button>
+        <button class="topbar-button" id="button-left" onclick="gotoStory(+1)">Links</button>
+        <button class="topbar-button" id="button-straight" onclick="gotoStory(+1)">geradeaus</button>
+        <button class="topbar-button" id="button-right" onclick="(+1)">rechts</button>
+
+        
     </div>
 
+    <img src="../img/map.jpg" class="hide" id="map"></img>
+    <div id="openmap"></div>
+    
     <div class="main">
+
         <iframe src="story/0.txt" class="story-readin" id="story-readin" frameborder="0"></iframe>
         <div id="popup"></div>
     </div>
@@ -60,6 +72,13 @@
         </div>
     </div>
     
+    <script>
+        const buttonmap = document.getElementById("buttonmap");
+        const map = document.getElementById("map"); 
+        showImageButton.addEventListener("click", () => { 
+         map.style.display = "block"; 
+      });
+    </script>
     <script>gotoStory(0);</script>
 </body>
 </html>

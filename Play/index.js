@@ -1,13 +1,21 @@
 let currentIndex = 0;
 
 function openCode() {
-    //let newWin = window.open("../Code/index.html", "Close", "width=450,height=350");
     const popup = document.getElementById("code-entry-full");
     
     if (popup.getAttribute("class") != 'hide')
         popup.setAttribute("class", "hide");
     else
         popup.setAttribute("class", "");
+}
+
+function openMap() {
+    const map = document.getElementById("map");
+    
+    if (map.getAttribute("class") != 'hide')
+        map.setAttribute("class", "hide");
+    else
+        map.setAttribute("class", "map1");
 }
 
 function gotoStory(index) { 
@@ -28,7 +36,8 @@ function gotoStory(index) {
         "button-story3": false,
         "button-story4": false,
         "button-story5": false,
-        "button-story6": false
+        "button-story6": false,
+        "button-story7": true
     };
     
     switch (currentIndex) {
@@ -43,7 +52,8 @@ function gotoStory(index) {
                 "button-story3": true,
                 "button-story4": true,
                 "button-story5": true,
-                "button-story6": true
+                "button-story6": true,
+                "button-story7": true
             };
             break;
         case 1:
@@ -57,7 +67,8 @@ function gotoStory(index) {
                 "button-story3": true,
                 "button-story4": true,
                 "button-story5": true,
-                "button-story6": true
+                "button-story6": true,
+                "button-story7": true
             };
             break;
         case 2:
@@ -71,7 +82,8 @@ function gotoStory(index) {
                 "button-story3": false,
                 "button-story4": true,
                 "button-story5": true,
-                "button-story6": true
+                "button-story6": true,
+                "button-story7": true
             };
             break;
         case 3:
@@ -85,7 +97,8 @@ function gotoStory(index) {
                 "button-story3": true,
                 "button-story4": false,
                 "button-story5": true,
-                "button-story6": true
+                "button-story6": true,
+                "button-story7": true
             };
             break;
         case 4:
@@ -99,7 +112,8 @@ function gotoStory(index) {
                 "button-story3": true,
                 "button-story4": true,
                 "button-story5": false,
-                "button-story6": true
+                "button-story6": true,
+                "button-story7": true
             };
             break;
         case 5:
@@ -114,10 +128,71 @@ function gotoStory(index) {
                 "button-story3": true,
                 "button-story4": true,
                 "button-story5": true,
-                "button-story6": false
+                "button-story6": false,
+                "button-story7": true
             };
             break;
         case 6:
+            name = "cave-1";
+            elements = {
+                "button-code": true,
+                "button-final": true,
+                "button-story0": true,
+                "button-story1": true,
+                "button-story2": true,
+                "button-story3": true,
+                "button-story4": true,
+                "button-story5": true,
+                "button-story6": true,
+                "button-story7": false,
+            };
+            break;
+        case 7:
+            name = "cave-2";
+            elements = {
+                "button-code": true,
+                "button-final": true,
+                "button-story0": true,
+                "button-story1": true,
+                "button-story2": true,
+                "button-story3": true,
+                "button-story4": true,
+                "button-story5": true,
+                "button-story6": true,
+                "button-story7": false,
+            };
+            break;
+        case 8:
+            name = "cave-3";
+            elements = {
+                "button-code": true,
+                "button-final": true,
+                "button-story0": true,
+                "button-story1": true,
+                "button-story2": true,
+                "button-story3": true,
+                "button-story4": true,
+                "button-story5": true,
+                "button-story6": true,
+                "button-story7": false,
+            };
+            break;
+        case 9:
+            name = "cave-4";
+            elements = {
+                "button-code": true,
+                "button-final": true,
+                "button-story0": true,
+                "button-story1": true,
+                "button-story2": true,
+                "button-story3": true,
+                "button-story4": true,
+                "button-story5": true,
+                "button-story6": true,
+                "button-story7": false,
+            };
+            break;
+        case 10:
             name = "price-chest";
             elements = {
                 "button-code": true,
@@ -128,7 +203,8 @@ function gotoStory(index) {
                 "button-story3": true,
                 "button-story4": true,
                 "button-story5": true,
-                "button-story6": true
+                "button-story6": true,
+                "button-story7": true
             };
             break;
         default:
@@ -149,5 +225,4 @@ function gotoStory(index) {
     const story = document.getElementById("story-readin");
     story.setAttribute("src", "story/" + index + ".txt")
 
-    document.body.style.backgroundImage = "url('../img/" + name + ".png')";
-}
+    document.body.style.backgroundImage = "url('../img/" + name + ".png')"; }

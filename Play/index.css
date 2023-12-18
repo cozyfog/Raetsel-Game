@@ -18,6 +18,11 @@ body {
     min-width: 350px;
 }
 
+.map1 {
+    padding-top: 4%;
+    padding-left: 78.2%;
+}
+
 button {
     border-radius: 15px;
     background-color: #00000059;
