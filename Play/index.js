@@ -27,6 +27,8 @@ function gotoStory(index) {
     let name = "";
     currentIndex = index;
 
+    let inCave = false;
+
     let elements = {
         "button-code": true,
         "button-final": true,
@@ -37,7 +39,7 @@ function gotoStory(index) {
         "button-story4": false,
         "button-story5": false,
         "button-story6": false,
-        "button-story7": true
+        "button-story7": true,
     };
     
     switch (currentIndex) {
@@ -146,6 +148,7 @@ function gotoStory(index) {
                 "button-story6": true,
                 "button-story7": false,
             };
+            inCave = true;
             break;
         case 7:
             name = "cave-2";
@@ -161,6 +164,7 @@ function gotoStory(index) {
                 "button-story6": true,
                 "button-story7": false,
             };
+            inCave = true;
             break;
         case 8:
             name = "cave-3";
@@ -176,6 +180,7 @@ function gotoStory(index) {
                 "button-story6": true,
                 "button-story7": false,
             };
+            inCave = true;
             break;
         case 9:
             name = "cave-4";
@@ -191,6 +196,7 @@ function gotoStory(index) {
                 "button-story6": true,
                 "button-story7": false,
             };
+            inCave = true;
             break;
         case 10:
             name = "price-chest";
@@ -212,6 +218,18 @@ function gotoStory(index) {
             break;
     }
 
+    if (inCave) {
+        document.getElementById("button-left").setAttribute("class", "topbar-button");
+        document.getElementById("button-straight").setAttribute("class", "topbar-button");
+        document.getElementById("button-right").setAttribute("class", "topbar-button");
+        document.getElementById("story-readin").setAttribute("class", "story-readin hide");
+    } else {
+        document.getElementById("button-left").setAttribute("class", "topbar-button hide");
+        document.getElementById("button-straight").setAttribute("class", "topbar-button hide");
+        document.getElementById("button-right").setAttribute("class", "topbar-button hide");
+        document.getElementById("story-readin").setAttribute("class", "story-readin");
+    }
+
     for (const [key, value] of Object.entries(elements)) {
         const element = document.getElementById(key);
         if (element == null) break;
@@ -225,4 +243,5 @@ function gotoStory(index) {
     const story = document.getElementById("story-readin");
     story.setAttribute("src", "story/" + index + ".txt")
 
-    document.body.style.backgroundImage = "url('../img/" + name + ".png')"; }
+    document.body.style.backgroundImage = "url('../img/" + name + ".png')";
+}
