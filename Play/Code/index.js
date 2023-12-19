@@ -32,14 +32,20 @@ function submit(nums) {
     nums.forEach((n) => {
         const d = document.getElementById(n);
         code += d.innerHTML;
+        d.innerHTML = 0;
     });
 
     switch (code) {
         case '1109':
             gotoStory(5);
             break;
+        case '2011':
+            gotoStory(12);
+            break;
+        case '2009':
+            gotoStory(13);
+            break;
         default:
             break;
     }
-
 }
