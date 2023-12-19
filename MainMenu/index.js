@@ -15,7 +15,7 @@ function MainMenu() {
 }
 
 function StartGame() {
-    window.open("../Play/index.html", "_blank")
+    window.open("../Play/index.html", "_self")
 }
 
 function QuitGame() {

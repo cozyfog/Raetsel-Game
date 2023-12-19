@@ -1,3 +1,4 @@
+
 let currentIndex = 0;
 
 function openCode() {
@@ -19,15 +20,9 @@ function openMap() {
 }
 
 function gotoStory(index) { 
-    /*const height = window.screen.availHeight;
-    const width = window.screen.availWidth;
-    
-    document.body.setAttribute("style", document.body.getAttribute("style") + "background-size: " + width + " " + height + ";");
-*/
+
     let name = "";
     currentIndex = index;
-
-    let inCave = false;
 
     let elements = {
         "button-code": true,
@@ -39,83 +34,48 @@ function gotoStory(index) {
         "button-story4": false,
         "button-story5": false,
         "button-story6": false,
-        "button-story7": true,
     };
     
     switch (currentIndex) {
         case 0:
             name = "house-inside";
             elements = {
-                "button-code": true,
-                "button-final": true,
                 "button-story0": false,
                 "button-story1": false,
-                "button-story2": true,
-                "button-story3": true,
-                "button-story4": true,
-                "button-story5": true,
-                "button-story6": true,
-                "button-story7": true
             };
             break;
         case 1:
             name = "outside-animals";
             elements = {
-                "button-code": true,
-                "button-final": true,
                 "button-story0": false,
                 "button-story1": true,
                 "button-story2": false,
-                "button-story3": true,
-                "button-story4": true,
-                "button-story5": true,
-                "button-story6": true,
-                "button-story7": true
             };
             break;
         case 2:
             name = "outside-front";
             elements = {
-                "button-code": true,
-                "button-final": true,
-                "button-story0": true,
-                "button-story1": true,
                 "button-story2": true,
                 "button-story3": false,
-                "button-story4": true,
-                "button-story5": true,
-                "button-story6": true,
-                "button-story7": true
             };
             break;
         case 3:
             name = "door-closed-16x9";
             elements = {
                 "button-code": false,
-                "button-final": true,
                 "button-story0": true,
-                "button-story1": true,
-                "button-story2": true,
                 "button-story3": true,
                 "button-story4": false,
                 "button-story5": true,
-                "button-story6": true,
-                "button-story7": true
             };
             break;
         case 4:
             name = "house-inside-code";
             elements = {
                 "button-code": true,
-                "button-final": true,
                 "button-story0": false,
-                "button-story1": true,
-                "button-story2": true,
-                "button-story3": true,
                 "button-story4": true,
                 "button-story5": false,
-                "button-story6": true,
-                "button-story7": true
             };
             break;
         case 5:
@@ -123,111 +83,72 @@ function gotoStory(index) {
             index = 3;
             elements = {
                 "button-code": true,
-                "button-final": true,
-                "button-story0": true,
-                "button-story1": true,
-                "button-story2": true,
-                "button-story3": true,
                 "button-story4": true,
                 "button-story5": true,
                 "button-story6": false,
-                "button-story7": true
             };
             break;
         case 6:
             name = "cave-1";
             elements = {
-                "button-code": true,
-                "button-final": true,
-                "button-story0": true,
-                "button-story1": true,
-                "button-story2": true,
-                "button-story3": true,
-                "button-story4": true,
-                "button-story5": true,
-                "button-story6": true,
                 "button-story7": false,
+                "button-story7.1": false,
+                "button-story7.2": false,
+                "button-story7.3": false,
+                "button-story6": true,
             };
-            inCave = true;
             break;
         case 7:
             name = "cave-2";
             elements = {
-                "button-code": true,
-                "button-final": true,
-                "button-story0": true,
-                "button-story1": true,
-                "button-story2": true,
-                "button-story3": true,
-                "button-story4": true,
-                "button-story5": true,
-                "button-story6": true,
-                "button-story7": false,
+                "button-story7.1": true,
+                "button-story7.2": true,
+                "button-story7.3": true,
+                "button-story8.1": false,
+                "button-story8.2": false,
             };
-            inCave = true;
             break;
         case 8:
             name = "cave-3";
             elements = {
-                "button-code": true,
-                "button-final": true,
-                "button-story0": true,
-                "button-story1": true,
-                "button-story2": true,
-                "button-story3": true,
-                "button-story4": true,
-                "button-story5": true,
-                "button-story6": true,
-                "button-story7": false,
+                "button-story8.1": true,
+                "button-story8.2": true,
+                "button-story9.1": false,
+                "button-story9.2": false,
             };
-            inCave = true;
             break;
         case 9:
             name = "cave-4";
             elements = {
-                "button-code": true,
-                "button-final": true,
-                "button-story0": true,
-                "button-story1": true,
-                "button-story2": true,
-                "button-story3": true,
-                "button-story4": true,
-                "button-story5": true,
-                "button-story6": true,
-                "button-story7": false,
+                "button-story9.1": true,
+                "button-story9.2": true,
+                "button-story10.1": false,
+                "button-story10.2": false,
+
             };
-            inCave = true;
             break;
         case 10:
+            name = "cave-5";
+            elements = {
+                "button-story10.1": true,
+                "button-story10.2": true,
+                "button-story11.1": false,
+                "button-story11.2": false,
+
+            };
+            break;
+        case 11:
             name = "price-chest";
             elements = {
-                "button-code": true,
+                "button-story7": true,
+                "button-story11.1": true,
+                "button-story11.2": true,
                 "button-final": false,
-                "button-story0": true,
-                "button-story1": true,
-                "button-story2": true,
-                "button-story3": true,
-                "button-story4": true,
-                "button-story5": true,
-                "button-story6": true,
-                "button-story7": true
             };
             break;
         default:
             name = "won-screen";
             break;
-    }
-
-    if (inCave) {
-        document.getElementById("button-left").setAttribute("class", "topbar-button");
-        document.getElementById("button-straight").setAttribute("class", "topbar-button");
-        document.getElementById("button-right").setAttribute("class", "topbar-button");
-        document.getElementById("story-readin").setAttribute("class", "story-readin hide");
-    } else {
-        document.getElementById("button-left").setAttribute("class", "topbar-button hide");
-        document.getElementById("button-straight").setAttribute("class", "topbar-button hide");
-        document.getElementById("button-right").setAttribute("class", "topbar-button hide");
-        document.getElementById("story-readin").setAttribute("class", "story-readin");
     }
 
     for (const [key, value] of Object.entries(elements)) {
@@ -242,6 +163,18 @@ function gotoStory(index) {
 
     const story = document.getElementById("story-readin");
     story.setAttribute("src", "story/" + index + ".txt")
+    
+    document.body.style.backgroundImage = "url('../img/" + name + ".png')"; }
 
-    document.body.style.backgroundImage = "url('../img/" + name + ".png')";
-}
+
+    for (let key in elements) {
+        let button = document.getElementById(key);
+        if (button) {
+            if (elements[key]) {
+                button.attributes.remove('hide'); // Show the button
+            } else {
+                button.attributes.add('hide'); // Hide the button
+            }
+        }
+    }
+

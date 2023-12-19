@@ -11,28 +11,37 @@
 <body>
 
     <div class="topbar">
-        <button class="topbar-button" id="button-code" onclick="openCode();">Code Einloesen</button>
-        <button class="topbar-button" id="button-final" onclick="window.open('../WinScreen/index.html', '_self');">Spiel Beenden</button>
-        <button class="topbar-button" id="button-story0" onclick="window.open('../DeathScreen/index.html', '_self');">Schlafen Gehen</button>
-        <button class="topbar-button" id="button-story1" onclick="gotoStory(1)">Jagen Gehen</button>
-        <button class="topbar-button" id="button-story2" onclick="gotoStory(2)">Ins Dorf gehen</button>
-        <button class="topbar-button" id="button-story3" onclick="gotoStory(3)">Zurueck gehen</button>
-        <button class="topbar-button" id="button-story4" onclick="gotoStory(4)">Zurueck gehen</button>
-        <button class="topbar-button" id="button-story5" onclick="gotoStory(3)">Zur Tuer gehen</button>
-        <button class="topbar-button" id="button-story6" onclick="gotoStory(6)">Herein gehen</button>
-        <button class="topbar-button" id="button-story7" onclick="openMap();">Karte</button>
+        <button class="topbar-button, hide" id="button-code" onclick="openCode();">Code Einloesen</button>
+        <button class="topbar-button, hide" id="button-final" onclick="window.open('../WinScreen/index.html', '_self');">Spiel Beenden</button>
+        <button class="topbar-button, hide" id="button-story0" onclick="window.open('../DeathScreen/index.html', '_self');">Schlafen Gehen</button>
+        <button class="topbar-button, hide" id="button-story1" onclick="gotoStory(1)">Jagen Gehen</button>
+        <button class="topbar-button, hide" id="button-story2" onclick="gotoStory(2)">Ins Dorf gehen</button>
+        <button class="topbar-button, hide" id="button-story3" onclick="gotoStory(3)">Zurueck gehen</button>
+        <button class="topbar-button, hide" id="button-story4" onclick="gotoStory(4)">Zurueck gehen</button>
+        <button class="topbar-button, hide" id="button-story5" onclick="gotoStory(3)">Zur Tuer gehen</button>
+        <button class="topbar-button, hide" id="button-story6" onclick="gotoStory(6)">Herein gehen</button>
+        <button class="topbar-button, hide" id="button-story7" onclick="openMap();">Karte</button>
+        <button class="topbar-button, hide" id="button-story7.1" onclick="gotoStory(7)">Links</button>
+        <button class="topbar-button, hide" id="button-story7.2" onclick="window.open('../DeathScreen/index.html', '_self');">geradeaus</button>
+        <button class="topbar-button, hide" id="button-story7.3" onclick="window.open('../DeathScreen/index.html', '_self');">rechts</button>
+        <button class="topbar-button, hide" id="button-story8.1" onclick="window.open('../DeathScreen/index.html', '_self');">geradeaus</button>
+        <button class="topbar-button, hide" id="button-story8.2" onclick="gotoStory(8)">rechts</button>
+        <button class="topbar-button, hide" id="button-story9.2" onclick="gotoStory(9)">links</button>
+        <button class="topbar-button, hide" id="button-story9.1" onclick="window.open('../DeathScreen/index.html', '_self');">geradeaus</button>
+        <button class="topbar-button, hide" id="button-story10.1" onclick="gotoStory(10)">geradeaus</button>
+        <button class="topbar-button, hide" id="button-story10.2" onclick="window.open('../DeathScreen/index.html', '_self');">rechts</button>
+        <button class="topbar-button, hide" id="button-story11.2" onclick="window.open('../DeathScreen/index.html', '_self');">links</button>
+        <button class="topbar-button, hide" id="button-story11.1" onclick="gotoStory(11)">rechts</button>
+    
 
-        <button class="topbar-button" id="button-left" onclick="gotoStory(7)">Links</button>
-        <button class="topbar-button" id="button-straight" onclick="gotoStory(10)">geradeaus</button>
-        <button class="topbar-button" id="button-right" onclick="(9)">rechts</button>
+        
     </div>
 
-    <div class="map">
-        <img src="../img/map.jpg" class="hide" id="map"></img>
-        <div id="openmap"></div>
-    </div>
+    <img src="../img/map.jpg" class="hide" id="map"></img>
+    <div id="openmap"></div>
     
     <div class="main">
+
         <iframe src="story/0.txt" class="story-readin" id="story-readin" frameborder="0"></iframe>
         <div id="popup"></div>
     </div>
@@ -41,7 +50,7 @@
         <div class="code-entry">
             <link rel="stylesheet" href="Code/index.css">
             <script src="Code/index.js"></script>
-            
+             
             <div class="code-entry-main">
                 <div>
                     <button class="code-entry-counter" onclick="increase('counter0')">⇧</button>
@@ -80,5 +89,6 @@
       });
     </script>
     <script>gotoStory(0);</script>
+    
 </body>
 </html>
