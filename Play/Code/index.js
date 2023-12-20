@@ -46,6 +46,8 @@ function submit(nums) {
             gotoStory(13);
             break;
         default:
+            if (currentIndex == 11)
+            window.open('../DeathScreen/index.html', '_self');
             break;
     }
 }
