@@ -19,6 +19,10 @@ function openMap() {
         map.setAttribute("class", "map1");
 }
 
+function getStoryIndex() {
+    return currentIndex;
+}
+
 function gotoStory(index) { 
 
     let name = "";
@@ -27,8 +31,10 @@ function gotoStory(index) {
     let elements = {
         "button-code": true,
         "button-final": true,
+        "button-final-death": true,
         "button-story0": true,
         "button-story1": true,
+        "button-story1.5": true,
         "button-story2": true,
         "button-story3": true,
         "button-story4": true,
@@ -57,6 +63,10 @@ function gotoStory(index) {
         case 1:
             name = "outside-animals";
             elements["button-story0"] = false;
+            elements["button-story1.5"] = false;
+            break;
+        case 1.5:
+            name = "village";
             elements["button-story2"] = false;
             break;
         case 2:
@@ -110,7 +120,7 @@ function gotoStory(index) {
             elements["button-story11.2"] = false;
             break;
         case 11:
-            name = "price-chest-closed";
+            name = "chose-chest";
             elements["button-code"] = false;
             break;
         case 12:
@@ -119,7 +129,7 @@ function gotoStory(index) {
             break;
         case 13:
             name = "herobrine-front";
-            elements["button-final"] = false;
+            elements["button-final-death"] = false;
             break;
         default:
             name = "won-screen";
@@ -140,15 +150,4 @@ function gotoStory(index) {
     story.setAttribute("src", "story/" + index + ".txt")
     
     document.body.style.backgroundImage = "url('../img/" + name + ".png')";
-    
-    /*for (let key in elements) {
-        let button = document.getElementById(key);
-        if (button) {
-            if (elements[key]) {
-                button.attributes.remove('hide'); // Show the button
-            } else {
-                button.attributes.add('hide'); // Hide the button
-            }
-        }
-    }*/
 }
